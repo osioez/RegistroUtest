@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Utest User Registration" skipped="0" tests="1" time="29.58" timestamp="2021-12-02 02:46:03"><testcase name="Register on Utest"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
-co.com.choucair.certification.RegisterUtest.tasks.Register.performAs(Register.java:17)&#13;
-co.com.choucair.certification.RegisterUtest.stepdefinitions.ChoucairRegisterUtestStepDefinitions.theUtestComWebsiteWeLookForTheJoinTodayRegistration(ChoucairRegisterUtestStepDefinitions.java:21)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Utest User Registration" skipped="0" tests="1" time="29.37" timestamp="2021-12-03 01:14:27"><testcase name="Register on Utest"/></testsuite>
