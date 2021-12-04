@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63c13596-9d73-4a91-9214-cfdbd0759144" name="Default Changelist" comment="Implementando metodos When y Then, dataDriven">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/tasks/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/tasks/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/userinterface/ChoucairRegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/userinterface/ChoucairRegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/choucair/certification/RegisterUtest/stepdefinitions/ChoucairRegisterUtestStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/choucair/certification/RegisterUtest/stepdefinitions/ChoucairRegisterUtestStepDefinitions.java" afterDir="false" />

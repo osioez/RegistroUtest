@@ -38,10 +38,16 @@ public class ChoucairRegisterUtestStepDefinitions {
                 utestChoucairData.get(0).getStrEmail(),
                 utestChoucairData.get(0).getStrMonth(),
                 utestChoucairData.get(0).getStrDay(),
-                utestChoucairData.get(0).getStrYear()
-                //,utestChoucairData.get(0).getStrLanguage()
-
-
+                utestChoucairData.get(0).getStrYear(),
+                //utestChoucairData.get(0).getStrLanguage(),
+                utestChoucairData.get(0).getStrCity(),
+                utestChoucairData.get(0).getStrZipCode(),
+                utestChoucairData.get(0).getStrCountry()
+                //utestChoucairData.get(0).getStrComputer()
+                //utestChoucairData.get(0).getStrVersion()
+                //utestChoucairData.get(0).getStrMobile(),
+                //utestChoucairData.get(0).getStrModel(),
+                //utestChoucairData.get(0).getStrOS()
         ));
     }
 

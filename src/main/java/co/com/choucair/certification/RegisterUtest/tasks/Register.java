@@ -9,7 +9,10 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget;
+import net.thucydides.core.pages.components.Dropdown;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 public class Register implements Task{
     private  String strFirstName;
@@ -19,8 +22,21 @@ public class Register implements Task{
     private  String strDay;
     private  String strYear;
     //private  String strLanguage;
+    private String strCity;
+    private String strZipCode;
+    private String strCountry;
 
-    public Register(String strFirstName, String strLastName, String strEmail,String strMonth,String strDay,String strYear) {
+    //private String strComputer;
+    //private String strVersion;
+    //private String strLanguag;
+    //private String strMobile;
+    //private String strModel;
+    //private String strOS;
+
+
+    public Register(String strFirstName, String strLastName, String strEmail,String strMonth,String strDay,
+                    String strYear,String strCity,String strZipCode,String strCountry) {
+
         this.strFirstName = strFirstName;
         this.strLastName = strLastName;
         this.strEmail = strEmail;
@@ -28,10 +44,22 @@ public class Register implements Task{
         this.strDay = strDay;
         this.strYear = strYear;
         //this.strLanguage = strLanguage;
+        this.strCity = strCity;
+        this.strZipCode = strZipCode;
+        this.strCountry = strCountry;
+        //this.strComputer = strComputer;
+        //this.strVersion = strVersion;
+        //this.strMobile = strMobile;
+        //this.strModel = strModel;
+       // this.strOS = strOS;
     }
 
-    public static Register onThePage(String strFirstName, String strLastName, String strEmail, String strMonth, String strDay, String strYear) {
-        return Tasks.instrumented(Register.class,strFirstName, strLastName, strEmail, strMonth, strDay, strYear);
+    public static Register onThePage(String strFirstName, String strLastName, String strEmail, String strMonth,
+                                     String strDay, String strYear, String strCity, String strZipCode,
+                                     String strCountry) {
+
+        return Tasks.instrumented(Register.class,strFirstName, strLastName, strEmail, strMonth, strDay,
+                strYear, strCity, strZipCode, strCountry);
     }
 
     @Override
@@ -45,31 +73,19 @@ public class Register implements Task{
                 Enter.keyValues(strDay).into(ChoucairRegisterPage.INPUT_DAY),
                 Enter.keyValues(strYear).into(ChoucairRegisterPage.INPUT_YEAR),
                 //Enter.keyValues(strLanguage).into(ChoucairRegisterPage.SELECT_LANGUAGE),
-                Click.on(ChoucairRegisterPage.NEXT_BUTTON0)
-                //Enter.theValue(strLanguage).into(ChoucairRegisterPage.SELECT_LANGUAGE)
-                //SelectFromOptions.byValue(strLanguage).from(By.name("Spanish"))
-                //Click.on(ChoucairRegisterPage.SELECT_LANGUAGE)
+                Click.on(ChoucairRegisterPage.NEXT_BUTTON0),
 
+                Enter.theValue(strCity).into(ChoucairRegisterPage.INPUT_CITY),
+                Enter.theValue(strZipCode).into(ChoucairRegisterPage.INPUT_ZIP),
+                Enter.keyValues(strCountry).into(ChoucairRegisterPage.SELECT_COUNTRY),
+                Click.on(ChoucairRegisterPage.NEXT_BUTTON1)
 
-                //Click.on(ChoucairRegisterPage.INPUT_CITY),
-                //Enter.theValue("705030").into(ChoucairRegisterPage.INPUT_ZIP),
-                //Enter.theValue("Colombia").into(ChoucairRegisterPage.SELECT_COUNTRY),
-                //Click.on(ChoucairRegisterPage.NEXT_BUTTON1),
-
-                //SelectFromOptions.byVisibleText("Windows").from(By.className("ui-select-match")),
-                //Click.on(ChoucairRegisterPage.INPUT_PC),
-                //Click.on(ChoucairRegisterPage.SELECT_VERSION),
-                //Click.on(ChoucairRegisterPage.SELECT_LANGUAG),
-                //Click.on(ChoucairRegisterPage.INPUT_MOVIL),
-                //Click.on(ChoucairRegisterPage.INPUT_MODEL),
-                //Click.on(ChoucairRegisterPage.SELECT_OS),
-                //Click.on(ChoucairRegisterPage.NEXT_BUTTON2),
-
-                //Enter.theValue("Mm@123456.").into(ChoucairRegisterPage.INPUT_PASS),
-                //Enter.theValue("Mm@123456.").into(ChoucairRegisterPage.INPUT_CONFIPASS),
-                //Click.on(ChoucairRegisterPage.CHECK_TERM),
-                //Click.on(ChoucairRegisterPage.CHECK_PRIVACY),
-                //Click.on(ChoucairRegisterPage.NEXT_BUTTON3)
+                //Enter.keyValues(strComputer).into(ChoucairRegisterPage.INPUT_PC),
+                //Enter.keyValues(strVersion).into(ChoucairRegisterPage.SELECT_VERSION),
+                //Enter.keyValues(strMobile).into(ChoucairRegisterPage.INPUT_MOVIL),
+                //Enter.keyValues(strModel).into(ChoucairRegisterPage.INPUT_MODEL),
+                //Enter.keyValues(strOS).into(ChoucairRegisterPage.SELECT_OS),
+                //Click.on(ChoucairRegisterPage.NEXT_BUTTON2)
                 );
     }
 }
