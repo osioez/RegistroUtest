@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63c13596-9d73-4a91-9214-cfdbd0759144" name="Default Changelist" comment="">
+    <list default="true" id="63c13596-9d73-4a91-9214-cfdbd0759144" name="Default Changelist" comment="Implementando metodos When y Then, dataDriven">
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/model/UtestChoucairData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/tasks/ReturnHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/userinterface/ChoucairHomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/userinterface/ChoucairRegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/choucair/certification/RegisterUtest/model/UtestChoucairData.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/co/com/choucair/certification/RegisterUtest/tasks/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/co/com/choucair/certification/RegisterUtest/tasks/Register.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/co/com/choucair/certification/RegisterUtest/stepdefinitions/ChoucairRegisterUtestStepDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/co/com/choucair/certification/RegisterUtest/stepdefinitions/ChoucairRegisterUtestStepDefinitions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Utest#20User#20Registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/Utest#20User#20Registration.html" afterDir="false" />
@@ -21,20 +24,18 @@
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/co.com.choucair.certification.RegisterUtest.runners.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/co.com.choucair.certification.RegisterUtest.runners.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/features/registerUtestChoucair.feature" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/features/registerUtestChoucair.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Utest#20User#20Registration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-Utest#20User#20Registration.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-co.com.choucair.certification.RegisterUtest.runners.RunnerTags.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-co.com.choucair.certification.RegisterUtest.runners.RunnerTags.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/model/UtestChoucairData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/tasks/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/tasks/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/choucair/certification/RegisterUtest/userinterface/ChoucairRegisterPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/choucair/certification/RegisterUtest/stepdefinitions/ChoucairRegisterUtestStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/choucair/certification/RegisterUtest/stepdefinitions/ChoucairRegisterUtestStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/registerUtestChoucair.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/registerUtestChoucair.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/browser-chrome.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e_screenshots.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/f7465f5d102298545e971f4802aae0ab22492f25612c930f851728a9ae2b782e_screenshots.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +123,14 @@
       <option name="presentableId" value="Default" />
       <updated>1638414733770</updated>
     </task>
+    <task id="LOCAL-00001" summary="Implementando metodos When y Then">
+      <created>1638586390262</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638586390263</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,5 +145,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Implementando metodos When y Then" />
+    <MESSAGE value="Implementando metodos When y Then, dataDriven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementando metodos When y Then, dataDriven" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

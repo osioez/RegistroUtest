@@ -2,29 +2,34 @@ package co.com.choucair.certification.RegisterUtest.tasks;
 
 import co.com.choucair.certification.RegisterUtest.userinterface.ChoucairRegisterPage;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
-import net.serenitybdd.screenplay.actions.selectactions.SelectByValueFromElement;
-import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
 public class Register implements Task{
+    private  String strFirstName;
+    private  String strLastName;
 
+    public Register(String strFirstName, String strLastName) {
+        this.strFirstName = strFirstName;
+        this.strLastName = strLastName;
+    }
 
-    public static Register onThePage() {
-        return Tasks.instrumented(Register.class);
+    public static Register onThePage(String strFirstName, String strLastName) {
+        return Tasks.instrumented(Register.class,strFirstName, strLastName);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(ChoucairRegisterPage.joinToday),
-                Enter.theValue("nombrePruebas").into(ChoucairRegisterPage.INPUT_FIRSTNAME),
-                Enter.theValue("apellidoPruebas").into(ChoucairRegisterPage.INPUT_LASTNAME),
+
+                Enter.theValue(strFirstName).into(ChoucairRegisterPage.INPUT_FIRSTNAME),
+                Enter.theValue(strLastName).into(ChoucairRegisterPage.INPUT_LASTNAME),
+                //Enter.theValue("nombrePruebas").into(ChoucairRegisterPage.INPUT_FIRSTNAME),
+                //Enter.theValue("apellidoPruebas").into(ChoucairRegisterPage.INPUT_LASTNAME),
                 Enter.theValue("hansel@correo.com").into(ChoucairRegisterPage.INPUT_EMAIL),
                 SelectFromOptions.byValue("number:12").from(By.id("birthMonth")),
                 SelectFromOptions.byValue("number:2").from(By.id("birthDay")),

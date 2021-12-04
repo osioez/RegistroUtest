@@ -10,4 +10,6 @@ Feature: Utest User Registration
 
     Given the Utest website we look for the Join Today registration
     When you enter this section you fill in the required information and save
+      | strFirstName | strLastName |
+      |   Mario      | Gonzalez    |
     Then this stores the user to then be able to access and use the services of the platform
