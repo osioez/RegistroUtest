@@ -25,7 +25,7 @@ public class Register implements Task{
         actor.attemptsTo(Click.on(ChoucairRegisterPage.joinToday),
                 Enter.theValue("nombrePruebas").into(ChoucairRegisterPage.INPUT_FIRSTNAME),
                 Enter.theValue("apellidoPruebas").into(ChoucairRegisterPage.INPUT_LASTNAME),
-                Enter.theValue("correoPruebas@correo.com").into(ChoucairRegisterPage.INPUT_EMAIL),
+                Enter.theValue("hansel@correo.com").into(ChoucairRegisterPage.INPUT_EMAIL),
                 SelectFromOptions.byValue("number:12").from(By.id("birthMonth")),
                 SelectFromOptions.byValue("number:2").from(By.id("birthDay")),
                 SelectFromOptions.byValue("number:1987").from(By.id("birthYear")),
@@ -53,8 +53,6 @@ public class Register implements Task{
                 Click.on(ChoucairRegisterPage.CHECK_PRIVACY),
                 Click.on(ChoucairRegisterPage.NEXT_BUTTON3)
                 );
-
-
     }
 }
 
