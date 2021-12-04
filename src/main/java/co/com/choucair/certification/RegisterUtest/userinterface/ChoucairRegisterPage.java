@@ -28,10 +28,9 @@ public class ChoucairRegisterPage extends PageObject {
     public static final Target INPUT_YEAR = Target.the("Where do we select the year")
             .located(By.id("birthYear"));
 
-    //public static final Target SELECT_LANGUAGE = Target.the("Select the language").located(By.className("ui-select-search input-xs ng-pristine ng-valid ng-empty ng-touched"));
+    //public static final Target SELECT_LANGUAGE = Target.the("Select the language").located(By.xpath("//input[@class='ui-select-search input-xs ng-pristine ng-valid ng-empty ng-touched']"));
 
-    public static final Target NEXT_BUTTON0 = Target.the("Next previus page")
-            .located(By.xpath("//div[@class='form-group col-xs-12 text-right']//a[@class='btn btn-blue']"));
+    public static final Target NEXT_BUTTON0 = Target.the("Next previus page").located(By.xpath("//div[@class='form-group col-xs-12 text-right']//a[@class='btn btn-blue']"));
 
     //Pagina2
     public static final Target INPUT_CITY = Target.the("Where do we write the city")

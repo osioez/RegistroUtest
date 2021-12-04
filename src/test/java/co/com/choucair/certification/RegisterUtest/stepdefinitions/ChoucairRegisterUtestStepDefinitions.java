@@ -4,10 +4,12 @@ import co.com.choucair.certification.RegisterUtest.model.UtestChoucairData;
 import co.com.choucair.certification.RegisterUtest.tasks.OpenUp;
 import co.com.choucair.certification.RegisterUtest.tasks.Register;
 import co.com.choucair.certification.RegisterUtest.tasks.ReturnHome;
+import co.com.choucair.certification.RegisterUtest.userinterface.ChoucairRegisterPage;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
@@ -15,6 +17,7 @@ import java.util.List;
 
 
 public class ChoucairRegisterUtestStepDefinitions {
+    private ChoucairRegisterPage choucairRegisterPage;
 
     @Before
     public void  setStage(){
@@ -31,7 +34,14 @@ public class ChoucairRegisterUtestStepDefinitions {
     public void youEnterThisSectionYouFillInTheRequiredInformationAndSave(List<UtestChoucairData> utestChoucairData) throws Exception {
         OnStage.theActorInTheSpotlight().attemptsTo(Register.onThePage(
                 utestChoucairData.get(0).getStrFirstName(),
-                utestChoucairData.get(0).getStrLastName()
+                utestChoucairData.get(0).getStrLastName(),
+                utestChoucairData.get(0).getStrEmail(),
+                utestChoucairData.get(0).getStrMonth(),
+                utestChoucairData.get(0).getStrDay(),
+                utestChoucairData.get(0).getStrYear()
+                //,utestChoucairData.get(0).getStrLanguage()
+
+
         ));
     }
 

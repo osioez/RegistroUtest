@@ -1,7 +1,9 @@
 package co.com.choucair.certification.RegisterUtest.tasks;
 
 import co.com.choucair.certification.RegisterUtest.userinterface.ChoucairRegisterPage;
+import co.com.choucair.certification.RegisterUtest.userinterface.ChoucairUtestPage;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -12,14 +14,24 @@ import org.openqa.selenium.By;
 public class Register implements Task{
     private  String strFirstName;
     private  String strLastName;
+    private  String strEmail;
+    private  String strMonth;
+    private  String strDay;
+    private  String strYear;
+    //private  String strLanguage;
 
-    public Register(String strFirstName, String strLastName) {
+    public Register(String strFirstName, String strLastName, String strEmail,String strMonth,String strDay,String strYear) {
         this.strFirstName = strFirstName;
         this.strLastName = strLastName;
+        this.strEmail = strEmail;
+        this.strMonth = strMonth;
+        this.strDay = strDay;
+        this.strYear = strYear;
+        //this.strLanguage = strLanguage;
     }
 
-    public static Register onThePage(String strFirstName, String strLastName) {
-        return Tasks.instrumented(Register.class,strFirstName, strLastName);
+    public static Register onThePage(String strFirstName, String strLastName, String strEmail, String strMonth, String strDay, String strYear) {
+        return Tasks.instrumented(Register.class,strFirstName, strLastName, strEmail, strMonth, strDay, strYear);
     }
 
     @Override
@@ -27,15 +39,17 @@ public class Register implements Task{
         actor.attemptsTo(Click.on(ChoucairRegisterPage.joinToday),
 
                 Enter.theValue(strFirstName).into(ChoucairRegisterPage.INPUT_FIRSTNAME),
-                Enter.theValue(strLastName).into(ChoucairRegisterPage.INPUT_LASTNAME)
+                Enter.theValue(strLastName).into(ChoucairRegisterPage.INPUT_LASTNAME),
+                Enter.theValue(strEmail).into(ChoucairRegisterPage.INPUT_EMAIL),
+                Enter.keyValues(strMonth).into(ChoucairRegisterPage.INPUT_MONTH),
+                Enter.keyValues(strDay).into(ChoucairRegisterPage.INPUT_DAY),
+                Enter.keyValues(strYear).into(ChoucairRegisterPage.INPUT_YEAR),
+                //Enter.keyValues(strLanguage).into(ChoucairRegisterPage.SELECT_LANGUAGE),
+                Click.on(ChoucairRegisterPage.NEXT_BUTTON0)
+                //Enter.theValue(strLanguage).into(ChoucairRegisterPage.SELECT_LANGUAGE)
+                //SelectFromOptions.byValue(strLanguage).from(By.name("Spanish"))
+                //Click.on(ChoucairRegisterPage.SELECT_LANGUAGE)
 
-                //Enter.theValue("hansel@correo.com").into(ChoucairRegisterPage.INPUT_EMAIL),
-                //SelectFromOptions.byValue("number:12").from(By.id("birthMonth")),
-                //SelectFromOptions.byValue("number:2").from(By.id("birthDay")),
-                //SelectFromOptions.byValue("number:1987").from(By.id("birthYear")),
-                //SelectFromOptions.byValue("languages").from(By.id("Spanish")),
-                //Click.on(ChoucairRegisterPage.SELECT_LANGUAGE),
-                //Click.on(ChoucairRegisterPage.NEXT_BUTTON0),
 
                 //Click.on(ChoucairRegisterPage.INPUT_CITY),
                 //Enter.theValue("705030").into(ChoucairRegisterPage.INPUT_ZIP),
